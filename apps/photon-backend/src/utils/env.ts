@@ -8,8 +8,8 @@
  */
 
 export interface Env {
-  PHOTON_PROJECT_ID: string;
-  PHOTON_PROJECT_SECRET: string;
+  SPECTRUM_PROJECT_ID: string;
+  SPECTRUM_PROJECT_SECRET: string;
   PORT: number;
   AI_SERVICE_URL: string;
   AI_TIMEOUT_MS: number;
@@ -17,7 +17,7 @@ export interface Env {
   NODE_ENV: string;
 }
 
-const REQUIRED = ["PHOTON_PROJECT_ID", "PHOTON_PROJECT_SECRET"] as const;
+const REQUIRED = ["SPECTRUM_PROJECT_ID", "SPECTRUM_PROJECT_SECRET"] as const;
 
 export function loadEnv(): Env {
   const missing = REQUIRED.filter((key) => !process.env[key]);
@@ -45,8 +45,8 @@ export function loadEnv(): Env {
   }
 
   return {
-    PHOTON_PROJECT_ID: process.env["PHOTON_PROJECT_ID"]!,
-    PHOTON_PROJECT_SECRET: process.env["PHOTON_PROJECT_SECRET"]!,
+    SPECTRUM_PROJECT_ID: process.env["SPECTRUM_PROJECT_ID"]!,
+    SPECTRUM_PROJECT_SECRET: process.env["SPECTRUM_PROJECT_SECRET"]!,
     PORT: port,
     AI_SERVICE_URL: process.env["AI_SERVICE_URL"] ?? "http://localhost:4000",
     AI_TIMEOUT_MS: aiTimeout,

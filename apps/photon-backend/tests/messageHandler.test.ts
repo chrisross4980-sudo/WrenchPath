@@ -21,8 +21,8 @@ process.env["LOG_LEVEL"] = "error";
 // ── Mock helpers ──────────────────────────────────────────────────────────────
 
 const TEST_ENV: Env = {
-  PHOTON_PROJECT_ID: "test-id",
-  PHOTON_PROJECT_SECRET: "test-secret",
+  SPECTRUM_PROJECT_ID: "test-id",
+  SPECTRUM_PROJECT_SECRET: "test-secret",
   PORT: 3000,
   AI_SERVICE_URL: "http://localhost:4000",
   AI_TIMEOUT_MS: 1000,

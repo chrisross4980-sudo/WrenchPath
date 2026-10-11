@@ -24,7 +24,7 @@ logger.info("WrenchPath ATL — Photon Backend starting", {
   port: env.PORT,
   aiServiceUrl: env.AI_SERVICE_URL,
   nodeEnv: env.NODE_ENV,
-  // NOTE: PHOTON_PROJECT_ID and PHOTON_PROJECT_SECRET are never logged.
+  // NOTE: SPECTRUM_PROJECT_ID and SPECTRUM_PROJECT_SECRET are never logged.
 });
 
 // ── 2. HTTP Server ────────────────────────────────────────────────────────────
@@ -34,8 +34,8 @@ const server = startServer(env.PORT);
 logger.info("Initializing Spectrum iMessage provider...");
 
 const app = await Spectrum({
-  projectId: env.PHOTON_PROJECT_ID,
-  projectSecret: env.PHOTON_PROJECT_SECRET,
+  projectId: env.SPECTRUM_PROJECT_ID,
+  projectSecret: env.SPECTRUM_PROJECT_SECRET,
   providers: [imessage.config()],
 });
 
