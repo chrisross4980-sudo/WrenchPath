@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.bun/
+
+# Build output
+dist/
+build/
+
+# Environment — NEVER commit real credentials
+.env
+.env.local
+.env.*.local
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# Logs
+*.log
+logs/
